@@ -1,12 +1,10 @@
-import threading
+import threading, time
 from pynput import keyboard
-import time
-grandmas = 0
-numberCookies = 0
-grandmaCookies = 0
+grandmas, numberCookies, grandmaCookies = 0, 0, 0
 clickerLevel = 1
 upgradeCost = 10
 gameContinue = True
+# What are all the int( ) conversions for?
 grandmas = int(grandmas)
 numberCookies = int(numberCookies)
 clickerLevel = int(clickerLevel)
@@ -100,6 +98,8 @@ def on_release(key):
         return False
 
 print('''press key 'h' for controls''')
+
+# Really cool that you've started looking into threading.
 
 thread1 = threading.Thread(target=infiniteloop1)
 thread1.start()
